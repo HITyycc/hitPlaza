@@ -1,0 +1,41 @@
+
+
+<view class="container">
+  <view class="community-join-body">
+    <navigator url="../createCommunity/createCommunity" open-type="navigate" class="community-create"><button>创建课程社区</button>
+    </navigator>
+    <navigator url="../joinCommunity/joinCommunity" open-type="navigate" class="community-join"><button>加入课程社区</button>
+    </navigator>
+  </view>
+  <view class="communityList">
+   <van-collapse value="{{ activeNames }}" bind:change="onChange">
+    <van-collapse-item title="我创建的社区" name="1">
+      <view class="community-join-body">
+      <navigator class="communitySelect" url="../DatabaseFirstPage/DatabaseFirstPage?communityId={{item.communityId}}" open-type="navigate" wx:for="{{myCreate}}" wx:key="key">
+      <button >{{item.communityName}}</button>
+      </navigator>
+      <navigator class="itemempty"></navigator>
+      <navigator class="itemempty"></navigator>
+      </view>
+    </van-collapse-item>
+    <van-collapse-item title="我加入的社区" name="2">
+      <view class="community-join-body">
+      <navigator class="communitySelect" url="../DatabaseFirstPage/DatabaseFirstPage?communityId={{item.communityId}}" open-type="navigate" wx:for="{{myJoin}}" wx:key="key">
+      <button >{{item.communityName}}</button>
+      </navigator>
+      <navigator class="itemempty"></navigator>
+      <navigator class="itemempty"></navigator>
+    </view>
+    </van-collapse-item>
+  </van-collapse>
+  </view>
+ 
+  
+</view>
+
+
+
+<!-- <view class="container">
+  <text style="text-align:left">我加入的社区:</text>
+  
+</view> -->

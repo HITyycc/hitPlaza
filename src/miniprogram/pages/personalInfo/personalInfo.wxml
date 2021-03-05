@@ -1,0 +1,35 @@
+<!--miniprogram/pages/personalCenter/personalCenter.wxml-->
+<view>
+  <view class="login-info">
+    <text 
+      style="width: 56rpx; height: 56rpx"
+      class="login-btn"
+    >用户名</text>
+    <!-- <text wx:if="{{logged}}">{{userInfo.name}}</text> -->
+    <input name="name" wx:if="{{logged}}" placeholder="{{name}}" bindinput="updateNickName"></input>
+  </view>
+  <!-- <view class="login-info">
+    <text 
+      style="width: 56rpx; height: 56rpx"
+      class="login-btn"
+    >用户姓名</text>
+    <text wx:if="{{logged}}">{{userInfo.nickName}}</text>
+  </view> -->
+  <view class="login-info">
+   <text 
+      style="width: 56rpx; height: 56rpx"
+      class="login-btn"
+    >所在年级</text>
+    <input name="grade" wx:if="{{logged}}" placeholder="{{grade}}" bindinput="updateGrade"></input>
+    <!-- <button class="login-btn">我的关注</button> -->
+  </view>
+  <view class="login-info">
+    <text 
+      style="width: 56rpx; height: 56rpx"
+      class="login-btn"
+    >所在专业</text>
+    <input name="department" wx:if="{{logged}}" placeholder="{{department}}" bindinput="updateDepartment"></input>
+    <!-- <button class="login-btn">我的回复</button> -->
+  </view>
+  <button id="save" class="save" bindtap="saveData">保存</button>
+</view>

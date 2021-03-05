@@ -1,0 +1,110 @@
+<!--miniprogram/pages/StuChargeDetail/StuChargeDetail.wxml-->
+<van-tabs active="{{ active }}" bind:change="onChange">
+  <van-tab title="课程内容区">
+      <navigator url="/pages/PageDetail/PageDetail?post={{item._id}}" wx:for="{{post_course}}" >
+      <view class="oneBlock">
+          <view><van-tag wx:if="{{item.top}}" class="tag" type="danger">置顶</van-tag>{{item.title}}</view>
+          <view class="time">{{item.lastModifiedTime+" "}}
+            <van-tag class="tag" wx:if="{{item.solved}}" type="success">已解决</van-tag>
+            <van-tag class="tag" wx:else type="danger">未解决</van-tag>
+          </view>
+        </view>
+      </navigator>
+
+  </van-tab>
+
+
+  <van-tab title="实验区">
+    <navigator url="/pages/PageDetail/PageDetail?post={{item._id}}" wx:for="{{post_experiment}}" >
+      <view class="oneBlock">
+          <view><van-tag class="tag" type="danger">置顶</van-tag>{{item.title}}</view>
+          <view class="time">{{item.lastModifiedTime+" "}}<van-tag class="tag" type="success">已解决</van-tag></view>
+        </view>
+      </navigator>
+  </van-tab>
+
+  <van-tab title="作业区">
+    <navigator url="/pages/PageDetail/PageDetail?post={{item._id}}" wx:for="{{post_homework}}" >
+      <view class="oneBlock">
+          <view><van-tag class="tag" type="danger">置顶</van-tag>{{item.title}}</view>
+          <view class="time">{{item.lastModifiedTime+" "}}<van-tag class="tag" type="success">已解决</van-tag></view>
+        </view>
+      </navigator>
+  </van-tab>
+
+  <van-tab title="精华区">
+    <navigator url="/pages/PageDetail/PageDetail?post={{item._id}}" wx:for="{{post_other}}" >
+      <view class="oneBlock">
+          <view><van-tag class="tag" type="danger">置顶</van-tag>{{item.title}}</view>
+          <view class="time">{{item.lastModifiedTime+" "}}<van-tag class="tag" type="success">已解决</van-tag></view>
+        </view>
+      </navigator>
+  </van-tab>
+</van-tabs>
+
+
+
+  <!-- <van-panel title="如何优化矩阵加法？大家是改汇编还是电路呀" desc="我改的是电路，但还是MISS了128次..." status="未解决" use-footer-slot>
+    <view slot="footer">
+        <van-row gutter="10">
+          <van-col span="10">
+            <van-button size="small" type="info" >关注</van-button>
+          </van-col>
+          <van-col span="10"> 
+            <van-button size="small" type="primary" bind:click="IntoClick"> 进入</van-button>
+          </van-col>
+          <van-col span="4">
+            <van-tag size="medium">置顶</van-tag>
+          </van-col>
+        </van-row>
+      </view>
+  </van-panel>
+
+  <van-panel title="【注意】关于实验二的内容勘误" desc="这次实验二的DemeCache的电路需要更改，电路图如下" status="已解决" use-footer-slot>
+    <view slot="footer">
+      <van-row gutter="10">
+        <van-col span="10">
+          <van-button size="small" type="info" >关注</van-button>
+        </van-col>
+        <van-col span="10"> 
+          <van-button size="small" type="primary" bind:click="IntoClick"> 进入</van-button>
+        </van-col>
+        <van-col span="4">
+          <van-tag size="medium">置顶</van-tag>
+        </van-col>
+      </van-row>
+    </view>
+  </van-panel> -->
+
+  <!-- </van-panel>
+    <van-panel title="【注意】关于实验二的内容勘误" desc="这次实验二的DemeCache的电路需要更改，电路图如下" status="已解决" use-footer-slot>
+      <view slot="footer">
+        <van-row gutter="10">
+          <van-col span="10">
+            <van-button size="small" type="info" >关注</van-button>
+          </van-col>
+          <van-col span="10"> 
+            <van-button size="small" type="primary" bind:click="IntoClick"> 进入</van-button>
+          </van-col>
+          <van-col span="4">
+            <van-tag size="medium">置顶</van-tag>
+          </van-col>
+        </van-row>
+      </view>
+    </van-panel> -->
+  
+      <!-- <van-panel title="标题" desc="描述信息" status="状态" use-footer-slot>
+      <view slot="footer">
+          <van-row gutter="10">
+          <van-col span="10">
+          <van-button size="small" type="info" >关注</van-button>
+          </van-col>
+          <van-col span="10"> 
+          <van-button size="small" type="primary" bind:click="IntoClick"> 进入</van-button>
+          </van-col>
+          <van-col span="4">
+          <van-tag size="medium">置顶</van-tag>
+          </van-col>
+        </van-row>
+      </view>
+    </van-panel> -->

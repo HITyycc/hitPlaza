@@ -1,0 +1,21 @@
+/* pages/createCommunity/createCommunity.wxss */
+.container{
+  width: 100%;
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+}
+input{
+  border: cadetblue solid;
+  border-radius: 10rpx;
+  height: 100rpx;
+  line-height: 80rpx;
+  font-size: 70rpx;
+  width: 100%;
+  margin: 60rpx 0px;
+  padding: 0rpx 10rpx;
+
+}
+label{
+  width: 90%;
+}

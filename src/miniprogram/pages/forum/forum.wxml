@@ -1,0 +1,14 @@
+<!--miniprogram/pages/kechengyemian.wxml-->
+<!-- <text>{{msg}}</text> -->
+<view class="container">
+  <view class="page-body">
+    <view class="btn-first-row" style="flex-direction:row;">
+      <button id="classcontent" class="class-content" bindtap="gotoPage">课程内容区</button>
+      <button class="homework" bindtap="gotoPage">作业区</button>
+    </view>
+    <view class="btn-second-row" style="flex-direction:row;">
+      <button class="project" bindtap="gotoPage">实验区</button>
+      <button class="essence" bindtap="gotoPage">精华区</button>
+    </view>
+  </view>
+</view>

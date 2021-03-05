@@ -1,0 +1,20 @@
+
+<van-index-bar wx:for="{{memList}}" wx:for-index='key'>
+  <view wx:if="{{item!=0}}">
+    <van-index-anchor index="{{key}}" />
+    <view wx:for="{{item}}" wx:for-item="member">
+      <van-cell title="{{member.name}}" data-member="{{member}}" bind:click="showPopup" clickable="true">
+      <van-tag wx:if="{{member.status == 'student'}}" type="primary">学生</van-tag>
+      <van-tag wx:else type="success">管理员</van-tag></van-cell>
+    </view>
+  </view>
+</van-index-bar>
+
+<van-popup show="{{ show }}" round closable
+  position="bottom" bind:close="onClose">
+<van-row>
+  <van-col span="12" wx:if="{{nowChoice.status == 'student'}}"><van-button type="primary" size="large" block bindtap="changeStatusToAdmin">选为助教</van-button></van-col>
+  <van-col span="12" wx:else><van-button type="primary" size="large" block bindtap="changeStatusToStudent">选为学生</van-button></van-col>
+  <van-col span="12"><van-button type="primary" size="large" block bindtap="deleteStu">删除用户</van-button></van-col>
+</van-row>
+</van-popup>

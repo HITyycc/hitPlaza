@@ -1,0 +1,3 @@
+<!--pages/personalStar/personalStar.wxml-->
+<van-panel wx:for="{{star}}" wx:key="index" title="{{item.star_to_post[0].title}}" desc="{{item.star_to_post[0].content}}" status="未解决" class="van-multi-ellipsis--l2">
+</van-panel>

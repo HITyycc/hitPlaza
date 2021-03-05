@@ -1,0 +1,52 @@
+<!--miniprogram/pages/DatabaseFirstPage/DatabaseFirstPage.wxml-->
+<van-notice-bar
+  text="7月6日晚上六点半在T5304举行计算机体系结构期末考试，请同学们注意"
+/>
+<van-grid column-num="2" icon-size="36px" square="true">
+  <van-grid-item link-type="navigateTo"
+    url="../PostSet/PostSet?area=0&communityId={{communityId}}" content-class="block1" text-class="block1" icon="https://6869-hitsz-raubs-1302289355.tcb.qcloud.la/firstPageIcon/%E8%AF%BE%E7%A8%8B%E8%A1%A8.png?sign=e7ecce29365c1b9712fff936f38cc51f&t=1592288906" text="课程内容区" />
+  <van-grid-item link-type="navigateTo"
+    url="../PostSet/PostSet?area=1&communityId={{communityId}}" icon="https://6869-hitsz-raubs-1302289355.tcb.qcloud.la/firstPageIcon/%E5%AE%9E%E9%AA%8C%20(1).png?sign=987c2d56d3121b270ce06f2e5955f42b&t=1592289216" text="实验区" />
+  <van-grid-item link-type="navigateTo"
+    url="../PostSet/PostSet?area=2&communityId={{communityId}}" icon="https://6869-hitsz-raubs-1302289355.tcb.qcloud.la/firstPageIcon/%E4%BD%9C%E4%B8%9A%20(1).png?sign=99fda19cbf02ba7b2f96f6683b4401bf&t=1592289180" text="作业区" />
+  
+  <van-grid-item link-type="navigateTo"
+    url="../PostSet/PostSet?area=3&communityId={{communityId}}" icon="https://6869-hitsz-raubs-1302289355.tcb.qcloud.la/firstPageIcon/%E5%85%B6%E4%BB%96%20(1).png?sign=eb92b8a34f6b8203b61720975267738c&t=1592289239" text="其它区" />
+</van-grid>
+<van-grid column-num="2">
+  <van-grid-item use-slot>
+      <navigator url="../StuCharge/StuCharge?communityId={{communityId}}" open-type="navigate" class="choice"><button   bindtap="StuCharge">学生管理</button></navigator>
+  </van-grid-item>
+  <van-grid-item use-slot>
+    <navigator url="../post/post?communityId={{communityId}}" class="choice" open-type="navigate"><button bindtap="dbPost">发布帖子</button></navigator>
+  </van-grid-item>
+</van-grid>
+<!-- <van-panel title="快分享给同学们吧" desc="邀请码：{{community.invitationCode}}" ></van-panel> -->
+<van-panel title="快把社区分享给同学们吧~" desc="{{community.invitationCode}}" use-footer-slot>
+  <view slot="footer">
+    <van-row gutter="10">
+      <van-button size="small" type="info" bind:click="copyCode">点击复制邀请码</van-button>
+    </van-row>
+  </view>
+</van-panel>
+    <!-- <text selectable="true" text-indent="10px">邀请码：{{community.invitationCode}}</text>
+  </view>
+</van-panel> -->
+  <!-- <view class="dbLesson_contain" style="flex-direction:row;">
+<button id="dbLesson" class="dbLesson" bindtap="dbLesson">课程内容区</button>
+  </view>
+
+  <view class="dbHomework_contain" style="flex-direction:row;">
+    <button id="dbHomework" class="dbHomework" bindtap="dbHomework">作业区</button>
+  </view>
+
+  <view class="dbLab_contain" style="flex-direction:row;">
+  <navigator url="../PostSet/PostSet" open-type="navigate">
+      <button id="dbLab" class="dbLab" bindtap="dbLab">实验区</button>
+      </navigator>
+  </view>
+
+  <view class="dbSelection_contain" style="flex-direction:row;">
+      <button id="dbSelection" class="dbSelection" bindtap="dbSelection">作业区</button>
+  </view> -->
+ 

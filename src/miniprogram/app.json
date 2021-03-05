@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/createCommunity/createCommunity",
+    "pages/personalCenter/personalCenter",
+    "pages/forum/forum",
+    "pages/post/post",
+    "pages/classcontent/classcontent",
+    "pages/DatabaseFirstPage/DatabaseFirstPage",
+    "pages/personalInfo/personalInfo",
+    "pages/personalStar/personalStar",
+    "pages/personalReply/personalReply",
+    "pages/StuCharge/StuCharge",
+    "pages/PostSet/PostSet",
+    "pages/PageDetail/PageDetail"
+  ],
+  "usingComponents": {
+    "van-datetime-picker": "@vant/weapp/datetime-picker/index"
+  },
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "师生校园互助论坛",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true,
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#0b988f",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "img/tabIcon/luntanNS.png",
+        "selectedIconPath": "img/tabIcon/luntanS.png"
+      },
+      {
+        "pagePath": "pages/personalCenter/personalCenter",
+        "text": "我的",
+        "iconPath": "img/tabIcon/PCNS.png",
+        "selectedIconPath": "img/tabIcon/PCS.png"
+      }
+    ]
+  }
+}

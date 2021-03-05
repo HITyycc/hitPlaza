@@ -1,0 +1,9 @@
+<!--pages/createCommunity/createCommunity.wxml-->
+
+<view class="container">
+<label>请输入创建的社区名称<input type="text" bindinput="handleInput"></input></label>
+<button type="primary" bindtap="confirmCreate">确认创建</button>
+</view>
+
+
+

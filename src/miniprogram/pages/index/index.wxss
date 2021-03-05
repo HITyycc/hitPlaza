@@ -1,0 +1,41 @@
+.container{
+  padding-top: 40rpx;
+}
+.communityList{
+  width: 100%;
+}
+.community-join-body{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 40rpx;
+  width: 100%;
+}
+
+.communitySelect, .community-create, .community-join{
+  width: 46%;
+  background-color: #0b988f;
+  border-radius: 15rpx;
+  padding: 0px 1rpx;
+  margin-top: 6rpx;
+}
+
+/* .community-create, .community-join{
+  position: relative;
+  transform: translate(-50%, 0);
+  margin-bottom: 60rpx;
+} */
+button{
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  color: white;
+  font-size: 28rpx;
+  font-weight: normal;
+}
+
+.itemempty {
+  height: 0px;
+  width: 46%;
+}

@@ -1,0 +1,10 @@
+/* miniprogram/pages/DatabaseFirstPage/DatabaseFirstPage.wxss */
+.choice{
+  background-color: teal;
+  width: 100%;
+  border-radius: 10rpx;
+}
+
+button{
+  color: white;
+}

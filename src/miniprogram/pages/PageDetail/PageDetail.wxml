@@ -1,0 +1,81 @@
+<!--贴子标题 发帖人 正文 贴子状态-->
+<view class="post">
+  <view class="header">
+    <van-tag wx:if="{{top}}" type="danger">置顶</van-tag>
+    <van-tag wx:if="{{post.solved}}"  type="success">已解决</van-tag>
+    <van-tag wx:else  type="danger">未解决</van-tag>
+    {{post.title}}
+  </view>
+  <view class="time">{{post.time}}</view>
+  <view class="content">
+    {{post.content}}
+  </view>
+  <view class="operator">
+   
+      <van-icon size="30px"bind:click="deletePost" name="https://6869-hitsz-raubs-1302289355.tcb.qcloud.la/firstPageIcon/delete.png?sign=176c3352ac32f4d99b0907413e7ed986&t=1592664430"/>
+      <van-icon size="30px" bind:click="zhiding" wx:if="{{top}}" name="https://6869-hitsz-raubs-1302289355.tcb.qcloud.la/firstPageIcon/cancelTop.png?sign=0feb7bf4d761172b6bfb9ec9b1167a60&t=1592664482"/>
+      <van-icon size="30px" bind:click="zhiding" wx:else name="https://6869-hitsz-raubs-1302289355.tcb.qcloud.la/firstPageIcon/top.png?sign=960235297a5dfed7ac1f23c7459ccd56&t=1592664470"/>
+    
+      <van-icon size="30px" bind:click="showPopup" name="https://6869-hitsz-raubs-1302289355.tcb.qcloud.la/firstPageIcon/changeStatus.png?sign=51f221270686b13e5d27e19c347c7358&t=1592662596"/>
+      <van-icon size="30px" wx:if="{{guanzhu}}" bind:click="guanzhu" name="https://6869-hitsz-raubs-1302289355.tcb.qcloud.la/firstPageIcon/star.png?sign=a16d311846a32d0f115eb996de1d4c77&t=1592663510"/>
+      <van-icon size="30px" wx:else bind:click="guanzhu" name="https://6869-hitsz-raubs-1302289355.tcb.qcloud.la/firstPageIcon/unStar.png?sign=04752981c533b56f97b95cb579e0e7de&t=1592663632"/>
+    
+    
+  </view>
+</view>
+
+  <!--贴子操作行 -->
+  
+
+
+  <!-- 回复内容 -->
+  <view wx:for="{{reply_to_post}}" wx:key="index">
+    <van-divider
+      contentPosition="center"
+      customStyle="color: #1989fa; border-color: #1989fa; font-size: 8px;">
+    回复
+    </van-divider>
+    <van-cell-group>
+      <van-cell title="{{item._openid}}" value="{{index+1}}" label="{{item.content}}" border="{{ false }}" />
+      <van-cell wx:for="{{item.reply}}" wx:for-index="replyIndex" wx:for-item="replyItem" wx:key="replyIndex" title="{{replyItem._openid}}" label="{{replyItem.content}}" border="{{ false }}" />
+    </van-cell-group>
+  </view>
+
+
+
+<view class="huifu">
+  <van-cell-group>
+  <van-field
+    value="{{ value }}"
+    placeholder="请输入回复"
+    border="{{ false }}"
+    autosize
+    bind:change="onChange">
+  <van-button slot="button" size="small" type="primary" bindtap="reply_one">发送</van-button>
+   </van-field> 
+  </van-cell-group>
+<van-dropdown-menu direction="up">
+  <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" />
+</van-dropdown-menu>
+</view>
+
+<!-- value="{{replyIndex+1}}" -->
+
+<!-- <van-cell-group>
+  <van-cell title="陈昕" value="2楼" label="同上" border="{{ false }}" />
+</van-cell-group>
+</van-panel>
+
+
+
+ -->
+<!-- 回复输入框 -->
+
+
+
+<van-popup show="{{show}}" round closable position="bottom" bind:close="onClose">
+  <van-row>
+    <van-col span="12"><van-button type="primary" size="large" block>未解答</van-button></van-col>
+    <van-col span="12"><van-button type="primary" size="large" block>已解答</van-button></van-col>
+  </van-row>
+</van-popup> 

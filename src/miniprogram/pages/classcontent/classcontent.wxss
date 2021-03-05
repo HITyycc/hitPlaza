@@ -1,0 +1,14 @@
+.btn-first-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.btn-second-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.homework, .class-content, .project, .essence {
+  color: white;
+  background-color: rgb(245, 152, 39);
+}

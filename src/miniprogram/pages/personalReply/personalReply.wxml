@@ -1,0 +1,10 @@
+<!-- <mp-dialog title="test" show="{{true}}" bindbuttontap="tapDialogButton" buttons="{{[{text: '取消'}, {text: '确认'}]}}">
+    <view>test content</view>
+</mp-dialog> -->
+<!-- <van-panel title="什么是索引" desc="数据库还没预习，老铁们救命啊啊啊啊啊哦啊啊啊啊救命啊" status="已解决">
+</van-panel>
+<van-panel title="体系结构实验二" desc="体系结构实验二怎么写？完全不会啊！" status="未解决" class="van-multi-ellipsis--l2">
+</van-panel> -->
+<van-panel wx:for="{{reply}}" wx:key="index" title="{{item.reply_to_post[0].title}}" desc="{{item.content}}" status="未解决" class="van-multi-ellipsis--l2">
+</van-panel>
+

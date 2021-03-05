@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "社区",
+  "usingComponents": {
+    "van-grid": "@vant/weapp/grid/index",
+    "van-grid-item": "@vant/weapp/grid-item/index",
+    "van-panel": "@vant/weapp/panel/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-row": "@vant/weapp/row/index",
+    "van-notice-bar": "@vant/weapp/notice-bar/index"
+  }
+}

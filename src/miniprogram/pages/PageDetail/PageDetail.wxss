@@ -1,0 +1,55 @@
+/* miniprogram/pages/PageDetail/PageDetail.wxss */
+.huifu{
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+
+.post{
+  padding: 6% 4%;
+  background-color: white;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  
+}
+.header{
+  font-weight: 600;
+  line-height: 26px;
+  
+}
+
+.operator{
+  margin-top: 30px ;
+  text-align: right;
+
+}
+
+.van-icon{
+  margin-right: 25px !important; 
+}
+
+.adminOperate{
+  flex: 1;
+}
+.studentOperate{
+  flex: 1;
+  text-align: right;
+}
+
+
+.content{
+  line-height: 20px;
+  font-size: 14px;
+
+}
+
+.time{
+  line-height: 20px;
+  font-size: 14px;
+  color: gray;
+  margin-bottom: 10px;
+}
+
+.van-tag{
+  margin-right: 4px !important;
+}

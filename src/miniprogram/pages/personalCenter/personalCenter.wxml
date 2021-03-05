@@ -1,0 +1,38 @@
+<!--miniprogram/pages/personalCenter/personalCenter.wxml-->
+<view>
+  <view class="login-info" style="height:120rpx">
+    <button 
+      style="background-image: url({{unloginImgUrl}}); width: 56rpx; height: 56rpx"
+      class="login-pic"
+    ></button>
+    <button 
+      class="login-btn"
+      open-type="getUserInfo"
+      bindgetuserinfo="onGetUserInfo"
+      >
+      <text wx:if="{{logged}}">{{nickName}}</text>
+      <text wx:else>登录</text></button>
+  </view>
+  <view class="login-info">
+    <button 
+      style="background-image: url({{personalInfoBtnImgUrl}}); width: 40rpx; height: 40rpx"
+      class="login-pic"
+    ></button>
+    <navigator url="../personalInfo/personalInfo" class="login-btn" open-type="navigate"><button style="margin-left:0px">个人信息</button></navigator>
+  </view>
+  <view class="login-info">
+    <button 
+      style="background-image: url({{guanzhuBtnImgUrl}}); width: 40rpx; height: 40rpx"
+      class="login-pic"
+    ></button>
+    <navigator url="../personalStar/personalStar" class="login-btn" open-type="navigate"><button style="margin-left:0px">我的关注</button></navigator>
+  </view>
+  <view class="login-info">
+    <button 
+      style="background-image: url({{huifuBtnImgUrl}}); width: 40rpx; height: 40rpx"
+      class="login-pic"
+    ></button>
+    <navigator url="../personalReply/personalReply" class="login-btn"open-type="navigate"><button style="margin-left:0px">我的回复</button></navigator>
+    
+  </view>
+</view>

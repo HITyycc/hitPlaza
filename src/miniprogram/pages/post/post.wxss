@@ -1,0 +1,30 @@
+/* miniprogram/pages/post/post.wxss */
+.postDetail{
+  width: 98%;
+  border: cadetblue solid 1px;
+  margin-bottom: 40rpx;
+  margin-top: 20rpx;
+}
+text{
+  position: relative;
+  left: -45%;
+
+}
+.container{
+  width: 100%;
+  padding: 0%;
+  text-align: left;
+}
+
+input{
+  height: 60rpx;
+  border-radius: 5rpx;
+  padding-left: 15rpx;
+  box-sizing: border-box;
+}
+
+textarea{
+  border-radius: 5rpx;
+  padding: 15rpx;
+  box-sizing: border-box;
+}

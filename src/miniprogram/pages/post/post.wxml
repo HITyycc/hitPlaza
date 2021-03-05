@@ -1,0 +1,15 @@
+<!--miniprogram/pages/post/post.wxml-->
+<view class="container">
+  <text>标题</text>
+    <input class="postDetail" placeholder="请输入主题" 
+    bindinput="post_title_input"/>
+  <text>内容</text>
+      <textarea class="postDetail" placeholder="请详细描述你的问题" 
+      bindinput="post_content_input"></textarea>
+</view>
+
+<van-dropdown-menu >
+  <van-dropdown-item bind:change="afterChoose1" value="{{ value1 }}" options="{{ option1 }}" />
+  <van-dropdown-item bind:change="afterChoose2" value="{{ value2 }}" options="{{ option2 }}" />
+</van-dropdown-menu>
+<van-button bind:click="post_one" type='primary' size="large">发布</van-button>

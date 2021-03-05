@@ -1,0 +1,29 @@
+/* miniprogram/pages/personalCenter/personalCenter.wxss */
+button {
+  font-weight: 200;
+}
+.login-pic{
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.login-info{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 3% 10%;
+  background-color: white;
+  margin:20rpx;
+}
+
+.login-btn{
+  flex: 1;
+  text-align: left;
+}
+
+.save{
+  background-color: #0b988f;
+  margin-bottom: 20px;
+}
